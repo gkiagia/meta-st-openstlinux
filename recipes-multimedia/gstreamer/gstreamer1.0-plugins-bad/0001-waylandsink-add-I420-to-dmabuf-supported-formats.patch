@@ -1,7 +1,7 @@
-From 5660ea7a819dd2dc96c11cf39fa0fbe30fcc1be0 Mon Sep 17 00:00:00 2001
+From 55408350aa475e1f897b32c8d00736cd43c95fce Mon Sep 17 00:00:00 2001
 From: Hugues Fruchet <hugues.fruchet@st.com>
 Date: Wed, 21 Nov 2018 10:56:12 +0100
-Subject: [PATCH 01/14] waylandsink: add I420 to dmabuf supported formats
+Subject: [PATCH 01/16] waylandsink: add I420 to dmabuf supported formats
 
 Change-Id: Iccbb762232a1f0fddabe81fdcd22a0c5e4a2f8bc
 Signed-off-by: Hugues Fruchet <hugues.fruchet@st.com>
@@ -22,5 +22,5 @@ index 77cfac8..8e54839 100644
  
  enum wl_shm_format
 -- 
-2.7.4
+2.33.0
 

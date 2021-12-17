@@ -1,7 +1,7 @@
-From 6ab672e15d68a5848f3645392ec24536d3f17b62 Mon Sep 17 00:00:00 2001
+From c16724a41f5b1579f2158cbf2952ee00a272b097 Mon Sep 17 00:00:00 2001
 From: Hugues Fruchet <hugues.fruchet@st.com>
 Date: Thu, 6 Dec 2018 18:09:20 +0100
-Subject: [PATCH 07/14] waylandsink: always select dmabuf buffer pool
+Subject: [PATCH 07/16] waylandsink: always select dmabuf buffer pool
 
 Force usage of dmabuf buffer pool by default, ie
 even if video/x-raw(memory:DMABuf) is not set in caps.
@@ -40,5 +40,5 @@ index 9355e0b..a6bd697 100644
      if (!gst_wl_display_check_format_for_dmabuf (sink->display, format))
        goto unsupported_format;
 -- 
-2.7.4
+2.33.0
 

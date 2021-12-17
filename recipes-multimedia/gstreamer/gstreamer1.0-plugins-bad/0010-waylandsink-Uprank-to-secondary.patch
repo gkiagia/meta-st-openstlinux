@@ -1,7 +1,7 @@
-From 54c3dfa96da62576da8ebb56dd57a66f8b5bfd2c Mon Sep 17 00:00:00 2001
+From b9111003026e117d648fdcddcb032ddeb56d51b5 Mon Sep 17 00:00:00 2001
 From: Christophe Priouzeau <christophe.priouzeau@st.com>
 Date: Mon, 21 May 2018 14:26:47 +0200
-Subject: [PATCH 10/14] waylandsink: Uprank to secondary
+Subject: [PATCH 10/16] waylandsink: Uprank to secondary
 
 Signed-off-by: Christophe Priouzeau <christophe.priouzeau@st.com>
 ---
@@ -22,5 +22,5 @@ index 739dd44..dff8724 100644
  }
  
 -- 
-2.7.4
+2.33.0
 

@@ -1,7 +1,7 @@
-From 10f7ad7be4d05a1a8dd294303cdde2f0cd7b5897 Mon Sep 17 00:00:00 2001
+From 4125cb09b0342b540bfc311e8aed523f98654e87 Mon Sep 17 00:00:00 2001
 From: Pierre-Yves MORDRET <pierre-yves.mordret@st.com>
 Date: Thu, 5 Sep 2019 16:19:22 +0200
-Subject: [PATCH 02/14] waylandsink: add dmabuf bufferpool
+Subject: [PATCH 02/16] waylandsink: add dmabuf bufferpool
 
 Add support of DMA-buf allocated buffers through use of
 drm/kms kernel driver ioctl DRM_IOCTL_MODE_CREATE_DUMB.
@@ -12,9 +12,9 @@ Change-Id: I0507752a1a64ee2c657b73d8c802c44fd707f49f
 Signed-off-by: Hugues Fruchet <hugues.fruchet@st.com>
 ---
  ext/wayland/Makefile.am      |   1 +
- ext/wayland/gstwaylandsink.c | 108 +++++++-
- ext/wayland/waylandpool.c    | 640 +++++++++++++++++++++++++++++++++++++++++++
- ext/wayland/waylandpool.h    | 105 +++++++
+ ext/wayland/gstwaylandsink.c | 108 +++++-
+ ext/wayland/waylandpool.c    | 640 +++++++++++++++++++++++++++++++++++
+ ext/wayland/waylandpool.h    | 105 ++++++
  ext/wayland/wldisplay.c      |   3 +
  ext/wayland/wldisplay.h      |   9 +-
  6 files changed, 854 insertions(+), 12 deletions(-)
@@ -1008,5 +1008,5 @@ index 4ecc0d6..45c37d7 100644
 -
  #endif /* __GST_WL_DISPLAY_H__ */
 -- 
-2.7.4
+2.33.0
 

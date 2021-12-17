@@ -13,9 +13,10 @@ SRC_URI_append = " \
     file://0010-waylandsink-Uprank-to-secondary.patch \
     file://0011-waylandsink-set-video-alignment-to-32-bytes.patch \
     file://0012-waylandsink-fallback-to-shm-if-display-does-not-supp.patch \
-    file://0013-waylandsink-XDG-protocol-does-not-work-in-fullscreen.patch \
-    file://0014-waylandsink-silently-drop-erroneous-frame.patch \
-    file://0015-waylandsink-add-waylandpool-on-meson-build.patch \
+    file://0013-waylandsink-silently-drop-erroneous-frame.patch \
+    file://0014-waylandsink-add-waylandpool-on-meson-build.patch \
+    file://0015-Revert-waylandsink-Don-t-create-throwaway-empty-regi.patch \
+    file://0016-Add-new-gtkwaylandsink-element.patch \
     "
 
 PACKAGECONFIG_GL ?= "${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'gles2 egl', '', d)}"
@@ -23,12 +24,10 @@ PACKAGECONFIG_GL ?= "${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'gles2 eg
 PACKAGECONFIG ?= " \
     ${GSTREAMER_ORC} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'bluetooth', 'bluez', '', d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'wayland', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'wayland gtk3', '', d)} \
     bz2 curl dash dtls hls rsvg sbc smoothstreaming sndfile ttml uvch264 webp \
     faac kms \
 "
 
-do_install_append() {
-    install -d ${D}${includedir}/gstreamer-1.0/wayland
-    install -m 644 ${S}/gst-libs/gst/wayland/wayland.h ${D}${includedir}/gstreamer-1.0/wayland
-}
+PACKAGECONFIG[gtk3] = "-Dgtk3=enabled,-Dgtk3=disabled,gtk+3"
+

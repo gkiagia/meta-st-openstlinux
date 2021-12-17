@@ -1,7 +1,7 @@
-From 4f4c843ab7f9853364179b6606289e8dabd0d470 Mon Sep 17 00:00:00 2001
+From 39d2337a1e0920ac99c69b12949053d813b0b453 Mon Sep 17 00:00:00 2001
 From: Hugues Fruchet <hugues.fruchet@st.com>
 Date: Wed, 25 Sep 2019 16:01:49 +0200
-Subject: [PATCH 14/14] waylandsink: silently drop erroneous frame
+Subject: [PATCH 13/16] waylandsink: silently drop erroneous frame
 
 Do not stop playback when erroneous frame is received at show_frame():
 - test file descriptors validity, to not let throw erroneous
@@ -93,5 +93,5 @@ index 8207113..2da0596 100644
    height = GST_VIDEO_INFO_HEIGHT (info);
    stride = GST_VIDEO_INFO_PLANE_STRIDE (info, 0);
 -- 
-2.7.4
+2.33.0
 

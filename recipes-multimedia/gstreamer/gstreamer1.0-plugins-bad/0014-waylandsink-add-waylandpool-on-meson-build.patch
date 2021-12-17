@@ -1,7 +1,7 @@
-From 09f8f75a1b25fc32255795d4eb5fdfb9a34a6035 Mon Sep 17 00:00:00 2001
+From 9677bc86951ed44f8f066dec880b26b809b0f786 Mon Sep 17 00:00:00 2001
 From: Christophe Priouzeau <christophe.priouzeau@st.com>
 Date: Tue, 18 Feb 2020 13:33:21 +0100
-Subject: [PATCH 15/15] waylandsink add waylandpool on meson build
+Subject: [PATCH 14/16] waylandsink add waylandpool on meson build
 
 Signed-off-by: Christophe Priouzeau <christophe.priouzeau@st.com>
 ---
@@ -36,5 +36,5 @@ index 7ddfafb..e2c0320 100644
  ]
  
 -- 
-2.17.1
+2.33.0
 

@@ -1,7 +1,7 @@
-From 4d7f46ab457197280f14260f5bd11601cadc9130 Mon Sep 17 00:00:00 2001
+From 1fcdb0dbb6c0049182eed53e3532f8c73ef3188f Mon Sep 17 00:00:00 2001
 From: Hugues Fruchet <hugues.fruchet@st.com>
 Date: Fri, 22 Mar 2019 15:40:03 +0100
-Subject: [PATCH 12/14] waylandsink: fallback to shm if display does not
+Subject: [PATCH 12/16] waylandsink: fallback to shm if display does not
  support dmabuf
 
 Fallback to shm if display does not support dmabuf.
@@ -35,5 +35,5 @@ index dff8724..d53f8f7 100644
    /* create a new pool for the new caps */
    if (sink->pool)
 -- 
-2.7.4
+2.33.0
 

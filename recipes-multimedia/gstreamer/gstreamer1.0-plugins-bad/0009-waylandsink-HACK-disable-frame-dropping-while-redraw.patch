@@ -1,7 +1,7 @@
-From 11fd91354c5c76b3424b1ff6c204775def3ddda7 Mon Sep 17 00:00:00 2001
+From 110bb31d4664ce233b4c292bcb3e6bab5511b4b6 Mon Sep 17 00:00:00 2001
 From: Hugues Fruchet <hugues.fruchet@st.com>
 Date: Wed, 12 Dec 2018 12:04:03 +0100
-Subject: [PATCH 09/14] waylandsink: HACK: disable frame dropping while redraw
+Subject: [PATCH 09/16] waylandsink: HACK: disable frame dropping while redraw
  is pending
 
 This workaround is needed to reach 30fps video playback.
@@ -57,5 +57,5 @@ index a6bd697..739dd44 100644
    if (G_UNLIKELY (sink->video_info_changed && !redraw)) {
      info = &sink->video_info;
 -- 
-2.7.4
+2.33.0
 
